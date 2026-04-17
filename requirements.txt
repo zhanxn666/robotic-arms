@@ -1,0 +1,8 @@
+
+roboticstoolbox-python
+spatialmath-python
+matplotlib
+scipy
+numpy
+imageio
+Pillow
