@@ -56,26 +56,13 @@ The script produces the following files (examples):
 - `cubic_traj.gif`, `hybrid_traj.gif` — MATLAB-style animated GIFs for the two trajectories.
 - `transforms_via0.txt` / `transforms_via0.tex`, ... — per-via-point textual transforms and LaTeX `equation*` files for report inclusion.
 
-Notes & tips
-------------
-- GIF frame-rate and resolution: the script computes `fps` from the time-step near the bottom of `PUMA560.py`. To change it, edit the `fps` assignment or the `figsize` / `dpi` in `save_animation_gif()` in [arm/PUMA560.py](arm/PUMA560.py).
-- Older CSV files were produced during intermediate runs but the current script no longer writes CSVs. To remove any leftover CSVs run:
+Animated preview
+----------------
+Quick animated previews are embedded below. If your viewer supports GIFs they should animate inline.
 
-```bash
-rm -f transforms_via*_T*.csv
-```
+### Cubic trajectory
+![Cubic trajectory preview](cubic_traj.gif)
 
-- If you see font/glyph warnings from `matplotlib` while running (non-ASCII labels), they are harmless for the saved images.
+### LSPB (Hybrid) trajectory
+![LSPB hybrid trajectory preview](hybrid_traj.gif)
 
-Troubleshooting
----------------
-- "ModuleNotFoundError": ensure you installed packages with `pip install -r requirements.txt` inside the `arms` environment.
-- GIFs look jumpy: the LSPB implementation was updated; re-run `python PUMA560.py` after editing `fps` if you want a different temporal sampling.
-
-Next steps
-----------
-- I can delete leftover CSV files for you, or merge all `transforms_via*.tex` into a single LaTeX file for your report—tell me which you prefer.
-
-Contact
--------
-Reply here with any requested changes (custom DH/MDH parameters, MP4 output, combined LaTeX), and I'll update the code.
