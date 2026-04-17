@@ -1,6 +1,14 @@
 PUMA560 Trajectory Analysis (改进 DH 参数法)
 =============================================
 
+
+### Cubic trajectory
+![Cubic trajectory preview](cubic_traj.gif)
+
+### LSPB (Hybrid) trajectory
+![LSPB hybrid trajectory preview](hybrid_traj.gif)
+
+
 Overview
 --------
 This folder contains `PUMA560.py`, a self-contained script that:
@@ -55,14 +63,4 @@ The script produces the following files (examples):
 - `hybrid_ee_path.png`, `hybrid_ee_xyz_vs_time.png` — path and time plots for the LSPB hybrid trajectory.
 - `cubic_traj.gif`, `hybrid_traj.gif` — MATLAB-style animated GIFs for the two trajectories.
 - `transforms_via0.txt` / `transforms_via0.tex`, ... — per-via-point textual transforms and LaTeX `equation*` files for report inclusion.
-
-Animated preview
-----------------
-Quick animated previews are embedded below. If your viewer supports GIFs they should animate inline.
-
-### Cubic trajectory
-![Cubic trajectory preview](cubic_traj.gif)
-
-### LSPB (Hybrid) trajectory
-![LSPB hybrid trajectory preview](hybrid_traj.gif)
 
